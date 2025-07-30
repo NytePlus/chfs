@@ -6,7 +6,7 @@
 
 In Lab 1, you will implement a single-machine (threaded) inode-based filesystem step by step. Below is the filesystem's architecture:
 
-![overall-arch](./lab1_1.png)
+![overall-arch](fs1_1.png)
 
 Our filesystem consists of three layers: block layer, inode layer and filesystem layer.
 
@@ -352,7 +352,7 @@ In previous parts, you have implemented the main body of your single-machine ino
 
 The adaptor layer acts as a translator between the standard filesystem requests made by user applications (such as the `ls`, `echo` commands) and the corresponding operations of your filesystem. It will intercept these requests and relay them to the appropriate functions in your filesystem implementation. This adaptor layer ensures that the filesystem seamlessly integrates with the existing OS infrastructure, allowing applications to interact with files and directories just as they would with any other filesystems. You may refer to the following figure to better understand the role of the adaptor layer:
 
-![adaptor-layer](./lab1_2.png)
+![adaptor-layer](fs1_2.png)
 
 In this lab, we use [the libfuse userspace library](http://libfuse.github.io/doxygen/index.html) provided by FUSE (Filesystem in Userspace) to implement the adaptor layer. You can refer to `daemons/single_node_fs/main.cc` for the detailed implementation.
 
