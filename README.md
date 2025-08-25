@@ -4,13 +4,13 @@
 
 这是一个类似于GFS的inode分布式文件系统，在此基础上实现了raft协议和map-reduce任务。你可以查看文档获得具体的信息。
 
-1. [Basic Filesystem](docs/fs/fs.md)
-2. [Distributed FileSystem](docs/dfs/dfs.md)
-3. [Raft](docs/raft/raft.md)
-4. [MapReduce With Distributed File System](docs/mr/mr.md)
+1. [Basic Filesystem](docs/fs/fs.md): 单机文件系统，在单机上实现基于inode的文件管理
+2. [Distributed FileSystem](docs/dfs/dfs.md)：分布式文件系统，客户端通过远程方法调用访问元数据与数据服务器
+3. [Raft](docs/raft/raft.md)：分布式日志协议，维持高可用的日志服务
+4. [MapReduce With Distributed File System](docs/mr/mr.md)：在chfs存储上实现大数据mr任务
 
-<a id="run-demo"></a>
-## Run Demo
+<a id="get-started"></a>
+## Get Started
 
 We use [the libfuse userspace library](http://libfuse.github.io/doxygen/index.html) provided by FUSE (Filesystem in Userspace) to implement the adaptor layer. You can refer to `daemons/distributed/main.cc` for the detailed implementation.
 
@@ -35,7 +35,8 @@ docker exec -it lab2-fs_client-1 bash
 
 The mount point is at `/tmp/mnt` in the `lab2-fs_client-1` container. The filesystem you have implemented is mounted to this directory, which means that every filesystem request inside this directory will be fulfilled by the filesystem you have implemented.
 
-### Run Demo (Not Included in Grading)
+<a id="run-demo"></a>
+## Run Demo
 
 - You can create a new directory:
 
