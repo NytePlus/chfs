@@ -9,6 +9,8 @@
 3. [Raft](docs/raft/raft.md)：分布式日志协议，维持高可用的日志服务
 4. [MapReduce With Distributed File System](docs/mr/mr.md)：在chfs存储上实现大数据mr任务
 
+感谢开源项目DeepWiki支持，同样可以查看 https://deepwiki.com/NytePlus/chfs 获得更便捷的代码访问，同时支持项目问答
+
 <a id="get-started"></a>
 ## Get Started
 
